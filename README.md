@@ -1,8 +1,10 @@
 # Curriculum Learning Ground 🚀
 
-A modern, highly-interactive, and aesthetically premium roadmap tracking application designed to guide developers through complex curriculums (such as AI/ML Engineering, Full Stack Development, Data Analytics, and Prompt Engineering).
+## 📖 About the Project
 
-Built with a stunning **Neumorphic (Soft UI)** design, the application provides an immersive, distraction-free environment for reading deep technical notes, taking AI-powered quizzes, and tracking your long-term learning progress.
+Curriculum Learning Ground is a comprehensive, self-hosted educational platform tailored for developers, engineers, and data scientists. The core goal of this project is to centralize high-quality, roadmap-driven curriculums (such as AI Engineering, Full Stack Development, and Data Analytics) into a single, interactive dashboard.
+
+Instead of jumping between dozens of tutorials, tabs, and websites, this application offers an "all-in-one" distraction-free environment. You can track your long-term progress, read deeply technical markdown notes natively in the browser, and test your knowledge with dynamic AI-generated quizzes—all wrapped in a stunning Neumorphic (Soft UI) aesthetic.
 
 ## ✨ Features
 
@@ -13,7 +15,29 @@ Built with a stunning **Neumorphic (Soft UI)** design, the application provides 
 - **Mermaid Diagram Support:** Technical notes automatically render complex architecture diagrams natively in the browser.
 - **Modular Curriculum:** Easily expandable architecture allows you to add new learning roadmaps with zero structural changes.
 
-## 🛠️ Technology Stack
+## 🛠️ Technology Stack & Architecture
+
+Here is a high-level overview of how the application is structured:
+
+```mermaid
+graph TD;
+    %% Styling
+    classDef frontend fill:#3182ce,stroke:#2b6cb0,stroke-width:2px,color:#fff,rx:8px,ry:8px;
+    classDef backend fill:#38a169,stroke:#276749,stroke-width:2px,color:#fff,rx:8px,ry:8px;
+    classDef ai fill:#805ad5,stroke:#553c9a,stroke-width:2px,color:#fff,rx:8px,ry:8px;
+    classDef data fill:#dd6b20,stroke:#c05621,stroke-width:2px,color:#fff,rx:8px,ry:8px;
+
+    UI[Frontend Client HTML/CSS/JS]:::frontend;
+    Data[Curriculum Data data.js]:::data;
+    MD[Markdown Notes .md]:::data;
+    Server[Node.js / Express Backend]:::backend;
+    Gemini[Google Gemini API]:::ai;
+
+    UI -->|Loads Roadmap| Data;
+    UI -->|Fetches Notes| MD;
+    UI <-->|Requests Quiz| Server;
+    Server <-->|Generates Questions| Gemini;
+```
 
 - **Frontend:** HTML5, CSS3 (Vanilla), JavaScript (ES6+)
 - **Backend:** Node.js, Express.js
