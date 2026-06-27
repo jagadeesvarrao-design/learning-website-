@@ -8,10 +8,11 @@ Instead of jumping between dozens of tutorials, tabs, and websites, this applica
 
 ## ✨ Features
 
-- **Beautiful Neumorphism UI:** A sleek, extruded soft-UI interface with micro-animations that makes interacting with tasks feel incredibly tactile.
+- **🌓 Dark Mode Toggle:** Switch seamlessly between a bright Neumorphic UI and a sleek, deep-charcoal Dark Mode. Preferences are saved automatically.
+- **📚 Deep Technical Notes:** Elaborate, beginner-friendly Markdown notes for every single topic.
+- **🤖 AI-Powered Quizzes:** Dynamic quizzes generated on-the-fly by Google Gemini API to test your knowledge.
 - **Dynamic Progress Tracking:** Visual progress bars automatically update as you check off curriculum tasks.
 - **Embedded Document Reader:** A fully integrated Markdown reader with a dedicated "Dark Mode" modal for late-night reading without leaving the app.
-- **AI-Powered Assessments:** Built-in generative AI (via Google Gemini) generates dynamic quizzes on the fly based on your selected subjects.
 - **Mermaid Diagram Support:** Technical notes automatically render complex architecture diagrams natively in the browser.
 - **Modular Curriculum:** Easily expandable architecture allows you to add new learning roadmaps with zero structural changes.
 
