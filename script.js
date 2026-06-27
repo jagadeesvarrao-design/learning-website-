@@ -46,6 +46,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const notesCloseBtn = document.getElementById('notes-close-btn');
     const notesContainer = document.getElementById('notes-container');
 
+    // Theme Toggle Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = themeToggleBtn.querySelector('i');
+    
+    // Initialize Theme
+    const savedTheme = localStorage.getItem('curriculum_theme') || 'light';
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        const isDark = document.body.classList.contains('dark-theme');
+        
+        if (isDark) {
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('curriculum_theme', 'dark');
+        } else {
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('curriculum_theme', 'light');
+        }
+    });
+
     // State
     let currentSubjectKey = localStorage.getItem('curriculum_subject') || 'ai_engineer';
     let studyingSubjectKey = localStorage.getItem('curriculum_studying');
