@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Learning Ground</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Markdown and Mermaid Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    
+    <title>AI Engineer Roadmap</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i> Curriculum
+            </div>
+            <div class="header-stats">
+                <span id="total-time-badge" class="time-badge"><i class="fa-regular fa-clock"></i> Total: Calculating...</span>
+            </div>
+        </nav>
+        <div class="progress-wrapper">
+            <div class="progress-info">
+                <span id="progress-text">0% Completed</span>
+            </div>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content reveal">
+                <h1 id="hero-title">Your Learning Ground</h1>
+                <p id="hero-desc">A distraction-free, definitive path to mastery. Configure your schedule below.</p>
+                
+                <div class="personalization-panel content-card">
+                    <div class="control-group">
+                        <label for="subject-select">Subject:</label>
+                        <select id="subject-select">
+                            <!-- Dynamically populated by JS -->
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="hours-per-day">Daily Study Hours:</label>
+                        <input type="number" id="hours-per-day" min="1" max="16" value="2">
+                    </div>
+                    <div class="control-group">
+                        <label for="experience-level">Experience Level:</label>
+                        <select id="experience-level">
+                            <option value="beginner">Beginner (Start from Scratch)</option>
+                            <option value="intermediate">Intermediate (Skip Basics)</option>
+                            <option value="advanced">Advanced (Core Only)</option>
+                        </select>
+                    </div>
+                    <button id="reset-progress" class="btn-secondary"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="roadmap-section">
+            <div class="timeline" id="roadmap-timeline">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p>Built for clarity and focus. Enjoy the journey.</p>
+            </div>
+        </footer>
+
+        <!-- Custom Switch Modal -->
+        <div id="switch-modal" class="modal-overlay hidden">
+            <div class="modal-content content-card">
+                <h3><i class="fa-solid fa-leaf"></i> Gentle Reminder</h3>
+                <p>You've started making great progress in <strong><span id="current-subject-name"></span></strong>. To truly master a technology, it's best to stay focused on one path at a time.</p>
+                <p>Are you sure you want to pause and switch to <strong><span id="new-subject-name"></span></strong>?</p>
+                <div class="modal-actions">
+                    <button id="modal-stay-btn" class="btn-primary">Stay Focused</button>
+                    <button id="modal-switch-btn" class="btn-secondary">Switch Anyway</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Modal -->
+        <div id="quiz-modal" class="modal-overlay hidden">
+            <div class="modal-content content-card quiz-content">
+                <h3 id="quiz-title">Topic Assessment</h3>
+                <p class="quiz-instruction">Answer the following questions to verify your understanding.</p>
+                <div id="quiz-questions-container" class="quiz-scroll-area">
+                    <!-- Dynamic Textareas injected here -->
+                </div>
+                <div id="quiz-feedback-container" class="quiz-feedback hidden">
+                    <h4 id="quiz-result-title"></h4>
+                    <p id="quiz-result-text"></p>
+                </div>
+                <div class="modal-actions" id="quiz-actions-default">
+                    <button id="quiz-cancel-btn" class="btn-secondary">Cancel</button>
+                    <button id="quiz-submit-btn" class="btn-primary">Submit Answers</button>
+                </div>
+                <div class="modal-actions hidden" id="quiz-actions-fail">
+                    <button id="quiz-restudy-btn" class="btn-primary">Re-study</button>
+                    <button id="quiz-proceed-btn" class="btn-secondary">Proceed Anyway</button>
+                </div>
+                <div class="modal-actions hidden" id="quiz-actions-pass">
+                    <button id="quiz-close-btn" class="btn-primary">Continue Journey</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Verdict Modal -->
+        <div id="verdict-modal" class="modal-overlay hidden">
+            <div class="modal-content content-card verdict-content">
+                <h3><i class="fa-solid fa-trophy"></i> Subject Completed!</h3>
+                <div id="verdict-loading" class="verdict-loading">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Generating Final Verdict...
+                </div>
+                <h4 id="verdict-title" class="hidden"></h4>
+                <p id="verdict-text" class="hidden"></p>
+                <div class="modal-actions">
+                    <button id="verdict-close-btn" class="btn-primary hidden">Close</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Notes Modal (Native Document Reader) -->
+    <div id="notes-modal" class="modal-overlay hidden">
+        <div class="modal-content notes-modal-content">
+            <span id="notes-close-btn" class="close-btn">&times;</span>
+            <div id="notes-container" class="markdown-body">
+                <!-- Markdown content gets injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Data & Scripts -->
+    <script src="data.js"></script>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
