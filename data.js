@@ -402,5 +402,103 @@ const roadmapsData = {
                 ]
             }
         ]
+    },
+    "ssc_prep": {
+        title: "SSC CGL / CHSL Prep",
+        icon: "fa-building-columns",
+        description: "The definitive roadmap for cracking SSC exams with deep notes on every section.",
+        phases: [
+            {
+                id: 1,
+                level: "beginner",
+                hours: 100,
+                title: "Tier 1 Preparation",
+                desc: "Foundational aptitude and awareness for preliminary exams.",
+                tasks: [
+                    {
+                        id: "ssc_quant",
+                        label: "Quantitative Aptitude",
+                        internalDoc: "doc_ssc_quant.md",
+                        videoLink: { text: "SSC Quant Playlist", url: "https://www.youtube.com/results?search_query=ssc+quantitative+aptitude+playlist" }
+                    },
+                    {
+                        id: "ssc_reasoning",
+                        label: "General Intelligence & Reasoning",
+                        internalDoc: "doc_ssc_reasoning.md",
+                        videoLink: { text: "SSC Reasoning Playlist", url: "https://www.youtube.com/results?search_query=ssc+reasoning+playlist" }
+                    }
+                ]
+            },
+            {
+                id: 2,
+                level: "intermediate",
+                hours: 80,
+                title: "Language & GK",
+                desc: "Mastering English comprehension and general awareness.",
+                tasks: [
+                    {
+                        id: "ssc_english",
+                        label: "English Language",
+                        internalDoc: "doc_ssc_english.md",
+                        videoLink: { text: "SSC English Playlist", url: "https://www.youtube.com/results?search_query=ssc+english+playlist" }
+                    },
+                    {
+                        id: "ssc_ga",
+                        label: "General Awareness",
+                        internalDoc: "doc_ssc_ga.md",
+                        videoLink: { text: "SSC General Awareness", url: "https://www.youtube.com/results?search_query=ssc+general+awareness+playlist" }
+                    }
+                ]
+            }
+        ]
+    },
+    "rrb_prep": {
+        title: "RRB NTPC / Group D",
+        icon: "fa-train",
+        description: "Specialized syllabus tailored for the Railway Recruitment Board exams.",
+        phases: [
+            {
+                id: 1,
+                level: "beginner",
+                hours: 90,
+                title: "Mathematics & Reasoning",
+                desc: "The core calculation subjects for railway exams.",
+                tasks: [
+                    {
+                        id: "rrb_math",
+                        label: "Mathematics (RRB)",
+                        internalDoc: "doc_rrb_math.md",
+                        videoLink: { text: "RRB Math Playlist", url: "https://www.youtube.com/results?search_query=rrb+ntpc+math+playlist" }
+                    },
+                    {
+                        id: "rrb_reasoning",
+                        label: "General Intelligence",
+                        internalDoc: "doc_rrb_reasoning.md",
+                        videoLink: { text: "RRB Reasoning Playlist", url: "https://www.youtube.com/results?search_query=rrb+ntpc+reasoning+playlist" }
+                    }
+                ]
+            },
+            {
+                id: 2,
+                level: "intermediate",
+                hours: 70,
+                title: "Science & Awareness",
+                desc: "General science and current affairs specifically for RRB.",
+                tasks: [
+                    {
+                        id: "rrb_science",
+                        label: "General Science",
+                        internalDoc: "doc_rrb_science.md",
+                        videoLink: { text: "RRB General Science", url: "https://www.youtube.com/results?search_query=rrb+general+science+playlist" }
+                    },
+                    {
+                        id: "rrb_ga",
+                        label: "General Awareness (Railways)",
+                        internalDoc: "doc_rrb_ga.md",
+                        videoLink: { text: "RRB General Awareness", url: "https://www.youtube.com/results?search_query=rrb+general+awareness+playlist" }
+                    }
+                ]
+            }
+        ]
     }
 };
