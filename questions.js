@@ -187,5 +187,130 @@ const topicQuestions = {
         "What is the 'ReAct' framework, and how does the format `Thought: -> Action: -> Observation:` allow an LLM to reliably use external APIs?",
         "Explain the concept of 'Tool Definition' in OpenAI's API. How do you describe a function's schema so the LLM knows exactly what JSON arguments to output?",
         "In advanced RAG, what is 'Query Transformation' (or Query Expansion), and how does rewriting the user's initial prompt improve retrieval accuracy from the Vector DB?"
+    ],
+    // FULL STACK
+    "fs_htmlcss": [
+        "What is the difference between inline, block, and inline-block elements in CSS?",
+        "Explain CSS Specificity and how it resolves conflicting styles.",
+        "How does the CSS Grid layout differ from Flexbox, and when should you use each?"
+    ],
+    "fs_js": [
+        "Explain closures in JavaScript with a practical example.",
+        "What is the Event Loop, and how does it handle asynchronous operations like setTimeout?",
+        "What is the difference between '==' and '===' in JavaScript?"
+    ],
+    "fs_django": [
+        "Explain the MVT (Model-View-Template) architecture in Django.",
+        "How do Django migrations work under the hood?",
+        "What is the purpose of the Django ORM, and how does it prevent SQL injection?"
+    ],
+    "fs_db": [
+        "What is normalization, and why is it important in relational databases?",
+        "Explain the difference between a primary key and a foreign key.",
+        "What is an index, and how does it speed up database queries?"
+    ],
+    "fs_deploy": [
+        "What are environment variables, and why are they critical for production deployments?",
+        "Explain the concept of continuous deployment (CI/CD).",
+        "What is the role of a reverse proxy like Nginx or Gunicorn in a web server setup?"
+    ],
+    // SQL & DATA
+    "sql_concepts": [
+        "What is the difference between DDL and DML in SQL?",
+        "Explain the ACID properties of a database transaction.",
+        "What is a clustered index vs a non-clustered index?"
+    ],
+    "sql_queries": [
+        "Explain the difference between INNER JOIN, LEFT JOIN, and FULL OUTER JOIN.",
+        "How does the GROUP BY clause work in conjunction with aggregate functions?",
+        "What is a subquery, and how does it differ from a Common Table Expression (CTE)?"
+    ],
+    "sql_advanced": [
+        "What are Window Functions in SQL? Give an example using ROW_NUMBER().",
+        "Explain how triggers work in PostgreSQL.",
+        "What is the difference between a VIEW and a MATERIALIZED VIEW?"
+    ],
+    "sql_design": [
+        "What is Entity-Relationship (ER) modeling?",
+        "Explain the Third Normal Form (3NF).",
+        "What are the pros and cons of denormalization?"
+    ],
+    "da_excel": [
+        "Explain how VLOOKUP works and its limitations compared to XLOOKUP.",
+        "What are Pivot Tables, and how are they used for data summarization?",
+        "How do you use Conditional Formatting to identify outliers in a dataset?"
+    ],
+    "da_sql": [
+        "Why is SQL often preferred over Excel for large dataset analysis?",
+        "How do you handle NULL values in aggregate functions like SUM() or COUNT()?",
+        "Explain how you would write a query to find the second highest salary in a table."
+    ],
+    "da_python": [
+        "What is the difference between a Pandas Series and a DataFrame?",
+        "How does the `.groupby()` method work in Pandas?",
+        "Explain how to handle missing data (NaN) using Pandas."
+    ],
+    "da_viz": [
+        "What is the difference between a continuous and discrete variable in data visualization?",
+        "When would you use a scatter plot versus a line chart?",
+        "Explain the concept of 'Data-to-Ink Ratio' in dashboard design."
+    ],
+    // PROMPT ENGINEERING
+    "pe_basics": [
+        "What is zero-shot prompting vs few-shot prompting?",
+        "How does setting a persona or role improve the LLM's output?",
+        "Explain the concept of 'hallucination' in Large Language Models."
+    ],
+    "pe_advanced": [
+        "What is Chain-of-Thought (CoT) prompting, and why does it improve reasoning?",
+        "How does temperature affect the randomness of an LLM's response?",
+        "Explain the Tree of Thoughts framework."
+    ],
+    "pe_agents": [
+        "What is Retrieval-Augmented Generation (RAG), and how does it solve hallucination?",
+        "Explain how an AI Agent uses 'tools' (like a calculator or web search) to solve problems.",
+        "What is vector search, and how are embeddings used in RAG?"
+    ],
+    // SSC
+    "ssc_quant": [
+        "What is the formula for Compound Interest, and how does it differ from Simple Interest?",
+        "Explain the concept of relative speed when two trains are moving in opposite directions.",
+        "What is the Pythagorean theorem, and list three common Pythagorean triplets."
+    ],
+    "ssc_reasoning": [
+        "What is a Syllogism, and how can Venn diagrams be used to solve them?",
+        "Explain the basic rules for solving blood relation puzzles.",
+        "How do you approach a number series problem to find the missing term?"
+    ],
+    "ssc_english": [
+        "What is the difference between Active and Passive voice? Provide an example.",
+        "Explain the rule of Subject-Verb agreement with collective nouns.",
+        "What does the idiom 'Bite the bullet' mean?"
+    ],
+    "ssc_ga": [
+        "Name the Fundamental Rights guaranteed by the Indian Constitution.",
+        "What is the difference between GDP and GNP in Economics?",
+        "List the major mountain ranges in India and their highest peaks."
+    ],
+    // RRB
+    "rrb_math": [
+        "What does BODMAS stand for, and why is it important?",
+        "How do you convert a recurring decimal into a fraction?",
+        "What are the formulas for the volume of a cylinder and a cone?"
+    ],
+    "rrb_reasoning": [
+        "Explain how position values of the English alphabet are used in Coding-Decoding.",
+        "How do you solve Mathematical Operation questions where signs are interchanged (+ means -, etc.)?",
+        "What is the best strategy for solving Data Interpretation (DI) pie charts quickly?"
+    ],
+    "rrb_science": [
+        "State Newton's three laws of motion.",
+        "What is the difference between atomic number and mass number?",
+        "Explain the function of xylem and phloem in plants."
+    ],
+    "rrb_ga": [
+        "When was the first passenger train introduced in India, and between which stations?",
+        "What are the headquarters of the different Railway Zones in India?",
+        "Name three recent major sports events and their host countries."
     ]
 };

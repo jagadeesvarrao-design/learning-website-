@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         quizSubmitBtn.textContent = 'Grading...';
 
         try {
-            const response = await fetch('http://localhost:3000/api/grade', {
+            const response = await fetch('/api/grade', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -514,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
             verdictCloseBtn.classList.add('hidden');
 
             try {
-                const response = await fetch('http://localhost:3000/api/verdict', {
+                const response = await fetch('/api/verdict', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
